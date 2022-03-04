@@ -24,6 +24,9 @@ function AddMovie(props) {
     } else {
         props.onAddMovie(movie)
     }
+    titleRef.current.value = ''
+    openingTextRef.current.value = ''
+    releaseDateRef.current.value = ''
   }
 
   return (
@@ -41,6 +44,7 @@ function AddMovie(props) {
         <input type='text' id='date' ref={releaseDateRef} />
       </div>
       <button>Add Movie</button>
+      <button onClick={props.onClose}>Cancel</button>
     </form>
   );
 }

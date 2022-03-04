@@ -16,6 +16,7 @@ button {
   color: white;
   padding: 0.75rem 2rem;
   border-radius: 20px;
+  margin: 0 0.5rem 0 0.5rem
 }
 
 button:focus {
@@ -27,3 +28,4 @@ button:active {
   background-color: #460897;
   border-color: #460897;
 }
+

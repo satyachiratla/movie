@@ -75,15 +75,19 @@ function App() {
     console.log(data);
   }
 
-  const buttonHandler = () => {
+  const formShowHandler = () => {
     setShowForm(true);
+  }
+
+  const formCloseHandler = () => {
+    setShowForm(false);
   }
 
   return (
     <React.Fragment>
       <section>
-      { showForm && <AddMovie onAddMovie={addMovieHandler} /> }
-      { !showForm && <button onClick={buttonHandler}>Add a Movie</button>}
+      { showForm && <AddMovie onAddMovie={addMovieHandler} onClose={formCloseHandler} /> }
+      { !showForm && <button onClick={formShowHandler}>Add a Movie</button>}
       </section>
       <section>
         <button onClick={fetchMoviesHandler}>Fetch Movies</button>
